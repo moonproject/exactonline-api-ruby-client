@@ -9,7 +9,7 @@ module Elmas
     end
 
     def mandatory_attributes
-      %i[attachment document file_name]
+      %i[attachment document file_name url]
     end
 
     def other_attributes
