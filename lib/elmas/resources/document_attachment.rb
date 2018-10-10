@@ -9,11 +9,15 @@ module Elmas
     end
 
     def mandatory_attributes
-      %i[attachment document file_name url]
+      %i[attachment document file_name]
     end
 
     def other_attributes
       []
+    end
+
+    def download_url
+      "#{@attributes[:url]}&Download=1"
     end
   end
 end
