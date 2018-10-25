@@ -15,7 +15,7 @@ module Elmas
 
     # https://start.exactonline.nl/docs/HlpRestAPIResourcesDetails.aspx?name=CashflowDirectDebitMandates
     def other_attributes
-      %i[description main payment_type reference signature_date type]
+      %i[description main payment_type reference signature_date type first_send]
     end
   end
 end
