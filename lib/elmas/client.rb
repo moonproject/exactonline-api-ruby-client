@@ -5,9 +5,8 @@ require "faraday"
 module Elmas
   class Client < API
     def connection
-      Faraday.new do |faraday|
+      Faraday.new(proxy: proxy) do |faraday|
         faraday.adapter Faraday.default_adapter
-        faraday.proxy proxy if proxy
       end
     end
   end
