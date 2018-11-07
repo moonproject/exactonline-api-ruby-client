@@ -7,6 +7,7 @@ module Elmas
     def connection
       Faraday.new do |faraday|
         faraday.adapter Faraday.default_adapter
+        faraday.proxy proxy if proxy
       end
     end
   end

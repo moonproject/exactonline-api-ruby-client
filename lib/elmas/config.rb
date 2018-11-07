@@ -22,6 +22,7 @@ module Elmas
       base_url
       refresh_token
       logger
+      proxy
     ).freeze
 
     # By default, don't set a user access token
@@ -65,6 +66,8 @@ module Elmas
 
     DEFAULT_LOGGER = ::Logger.new(STDOUT)
 
+    DEFAULT_PROXY = nil
+
     # @private
     threadsafe_attribute(*VALID_OPTIONS_KEYS)
 
@@ -100,6 +103,7 @@ module Elmas
       self.user_agent         = DEFAULT_USER_AGENT
       self.refresh_token      = DEFAULT_REFRESH_TOKEN
       self.logger             = DEFAULT_LOGGER
+      self.proxy              = DEFAULT_PROXY
     end
   end
 end
