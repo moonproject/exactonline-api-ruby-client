@@ -1,18 +1,3 @@
-Documentation:
-  Enabled: false
-
-Lint/UriEscapeUnescape:
-  Enabled: false
-
-NAming/FileName:
-  Enabled: false
-
-Style/MethodMissing:
-  Enabled: false
-
-StringLiterals:
-  EnforcedStyle: double_quotes
-
 AllCops:
   Include:
     - '**/Rakefile'
@@ -25,36 +10,42 @@ AllCops:
     - 'log/**/*'
     - 'spec/**/*'
     - 'config/**/*'
-
-Metrics/AbcSize:
-  Max: 30
-Metrics/BlockNesting:
-  Max: 3
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.6.5
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+Layout/LineLength:
+  Max: 126 # Github fixed web line length
 Metrics/ClassLength:
-  CountComments: false  # count full line comments?
-  Max: 100
+  Max: 500
+Metrics/ModuleLength:
+  Max: 250
+Metrics/AbcSize:
+  Max: 50
 Metrics/CyclomaticComplexity:
-  Max: 6
-Metrics/LineLength:
-  Max: 150
-  AllowURI: true
-  URISchemes:
-    - http
-    - https
-
+  Max: 25
 Metrics/MethodLength:
-  CountComments: false  # count full line comments?
-  Max: 13
-
-Metrics/ParameterLists:
-  Max: 5
-  CountKeywordArgs: true
-
+  Max: 25
 Metrics/PerceivedComplexity:
-  Max: 7
-Style/PerlBackrefs:
+  Max: 12
+Naming/RescuedExceptionsVariableName:
+  Enabled: false # Rubocop contradicts himself
+Style/AsciiComments:
   Enabled: false
-Lint/AmbiguousOperator:
+Style/ClassAndModuleChildren:
   Enabled: false
-Rails/Delegate:
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false # Default in ruby 3, so don't need to worry about, except we go some memory leaks
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Style/PercentLiteralDelimiters:
+  Enabled: false # Cause of a bug in codeclimate
+Style/RegexpLiteral:
   Enabled: false
