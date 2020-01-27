@@ -12,5 +12,9 @@ module Elmas
     def mandatory_attributes
       %i[date g_l_account amount_f_c]
     end
+
+    def other_attributes
+      %i[type]
+    end
   end
 end
