@@ -14,7 +14,7 @@ module Elmas
     end
 
     def other_attributes
-      %i[type]
+      %i[type description from to]
     end
   end
 end
