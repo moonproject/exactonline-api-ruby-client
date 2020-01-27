@@ -2,6 +2,8 @@
 
 module Elmas
   class BadRequestException < StandardError
+    attr_accessor :response, :parsed
+
     def initialize(response, parsed)
       @response = response
       @parsed = parsed

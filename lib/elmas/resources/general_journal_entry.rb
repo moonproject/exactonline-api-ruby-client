@@ -9,7 +9,7 @@ module Elmas
     end
 
     def mandatory_attributes
-      %i[journal general_journal_entry_lines]
+      %i[journal_code general_journal_entry_lines]
     end
 
     def other_attributes
