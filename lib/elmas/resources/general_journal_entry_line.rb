@@ -13,7 +13,7 @@ module Elmas
     end
 
     def other_attributes
-      %i[account]
+      %i[account v_a_t_type]
     end
   end
 end
