@@ -10,6 +10,14 @@ module Elmas
       "salesentry/SalesEntries"
     end
 
+    def id?
+      !@attributes[:entry_id].nil?
+    end
+
+    def basic_identifier_uri
+      "#{base_path}(guid'#{entry_id}')"
+    end
+
     def mandatory_attributes
       %i[journal customer sales_entry_lines]
     end
